@@ -1,0 +1,84 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: apa path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_happy
+  - intent: apa
+  - action: utter_apa
+
+- story: bagaimana path
+  steps:
+  - intent: bagaimana
+  - action: utter_bagaimana
+
+- story: aku path
+  steps:
+  - intent: aku
+  - action: utter_aku
+
+- story: saya path
+  steps:
+  - intent: saya
+  - action: utter_saya
+
+- story: kamu path
+  steps:
+  - intent: kamu
+  - action: utter_kamu
+
+- story: kemana path
+  steps:
+  - intent: kemana
+  - action: utter_kemana
+
+- story: kita path
+  steps:
+  - intent: kita
+  - action: utter_kita
+
+- story: kalian path
+  steps:
+  - intent: kalian
+  - action: utter_kalian
+
+- story: mengapa path
+  steps:
+  - intent: mengapa
+  - action: utter_mengapa
+
+- story: siapa path
+  steps:
+  - intent: siapa
+  - action: utter_siapa
